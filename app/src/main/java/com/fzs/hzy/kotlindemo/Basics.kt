@@ -241,6 +241,13 @@ fun stringGrammar() {
         |(Benjamin Franklin)
         """.trimMargin()
     println(text)
+    println("int max :${Int.MAX_VALUE}")
+    println("uint max :${UInt.MAX_VALUE}")
+    println("time :${24 * 60 * 60 * 1000}")
+    var f : Float = 2f/3
+    val l : Long = Int.MAX_VALUE + 2L
+    val ll : Long = 0
+    println("float twoThirds = $f")
 }
 
 
