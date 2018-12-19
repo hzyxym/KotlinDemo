@@ -2,7 +2,7 @@ package com.fzs.hzy.baselibrary.utils
 
 fun sum(a: Int, b: Int) = a + b
 
-fun printSum(a: Int, b: Int) {
+fun sumPrint(a: Int, b: Int) {
     println("sum of $a and $b is ${a + b}")
 }
 
