@@ -1,4 +1,4 @@
-package com.fzs.hzy.kotlindemo.entity
+package com.fzs.hzy.kotlindemo
 
 import com.fzs.hzy.baselibrary.bar.Bar as bBar
 
