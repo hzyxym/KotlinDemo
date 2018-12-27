@@ -248,6 +248,9 @@ fun stringGrammar() {
     val l : Long = Int.MAX_VALUE + 2L
     val ll : Long = 0
     println("float twoThirds = $f")
+    var index = 1
+    index = ++index
+    println("index : $index")
 }
 
 
