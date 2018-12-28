@@ -32,5 +32,6 @@ class Person(val name: String) {
 
     fun show(){
         nonNulls.map { println("show:$it") }
+        println("name:$name")
     }
 }

@@ -12,5 +12,6 @@ fun test(){
     println("$height,$height2")
     println("$height,$height2")
     var person = Person("hzy")
+    var daughter = Person("hbx",person)
     println("show:${person.show()}")
 }
