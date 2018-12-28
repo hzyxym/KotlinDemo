@@ -11,7 +11,8 @@ fun test(){
     println("$height,$height2")
     println("$height,$height2")
     println("$height,$height2")
-    var person = Person("hzy")
-    var daughter = Person("hbx",person)
-    println("show:${person.show()}")
+    var farther = Person("hzy")
+    var daughter = Person("hbx",farther)
+    println("show:${farther.show()}")
+    println("daughter show:${daughter.show()}")
 }
