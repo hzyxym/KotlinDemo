@@ -45,3 +45,7 @@ fun getStringLength(obj : Any): Int?{
     }
     return null
 }
+
+fun todoFun(){
+    //TODO do the functions
+}

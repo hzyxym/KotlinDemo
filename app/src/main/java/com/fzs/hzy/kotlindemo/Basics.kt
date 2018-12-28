@@ -2,6 +2,7 @@ package com.fzs.hzy.kotlindemo
 
 import com.fzs.hzy.baselibrary.utils.*
 import com.fzs.hzy.kotlindemo.entity.Customer
+import com.fzs.hzy.kotlindemo.entity.UserInfo
 
 val PI = 3.14
 var x = 0
@@ -18,7 +19,8 @@ fun main(vararg args: String) {
 //    listGrammar()
 //    basicsGrammar()
 //    grammarOrNull()
-    stringGrammar()
+//    stringGrammar()
+    testJackson()
 }
 
 
@@ -248,11 +250,32 @@ fun stringGrammar() {
     val l : Long = Int.MAX_VALUE + 2L
     val ll : Long = 0
     println("float twoThirds = $f")
+    //TODO show view
+    println("task1")
+    println("task3")
+    println("task2")
     var index = 1
     index = ++index
     println("index : $index")
 }
 
+fun testJackson(){
+    val customer = Customer("hzy","953624084@qq.com")
+    println("customer:"+JacksonUtil.toJSON(customer))
+    val hzy = "{\"name\":\"hzy\",\"email\":\"953624084@qq.com\"}"
+
+    val userInfo = UserInfo()
+    userInfo.age = 2
+    userInfo.userName = "hzy"
+    println("user:${JacksonUtil.toJSON(userInfo)}")
+
+    val userJson = "{\"userName\":\"hzy\",\"age\":\"2\",\"nickName\":\"aa\"}"
+    val user = JacksonUtil.readValue(userJson,UserInfo::class.java)
+    println("user name:${user.userName},user age:${user.age}")
+//    val hzyCustomer = JacksonUtil.readValue(hzy,Customer::class.java)
+//    println("hzy email:${hzyCustomer.email}")
+    println("test commit 1")
+}
 
 
 
