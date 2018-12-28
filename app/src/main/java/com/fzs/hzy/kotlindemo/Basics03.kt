@@ -13,4 +13,5 @@ fun test(){
     println("$height,$height2")
     println("$height,$height2")
     println("$height,$height2")
+    println("$height,$height2")
 }
