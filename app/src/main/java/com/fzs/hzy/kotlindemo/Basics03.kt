@@ -18,4 +18,5 @@ fun test(){
     var daughter = Person("hbx",farther)
     println("show:${farther.show()}")
     println("daughter show:${daughter.show()}")
+    println("test push")
 }
