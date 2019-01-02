@@ -2,7 +2,7 @@ package com.fzs.hzy.kotlindemo.entity
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 
-data class Customer(val name: String, val email: String)
+data class Customer(val name: String = "", val email: String = "")
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 class UserInfo(){

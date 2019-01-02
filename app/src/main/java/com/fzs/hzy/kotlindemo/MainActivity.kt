@@ -13,5 +13,7 @@ class MainActivity : AppCompatActivity() {
         println(user)
         println("hzyxym0")
         btn_fzs.setOnClickListener{println("aa")}
+        val bar3 = Bar()
+        bar3.testInit()
     }
 }
