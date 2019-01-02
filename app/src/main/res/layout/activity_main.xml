@@ -23,4 +23,8 @@
             style="?android:attr/borderlessButtonStyle"
             android:background="@drawable/btn_corner_yellow_bg_black_edg_selector"/>
 
+    <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:hint="fdas"/>
 </LinearLayout>
