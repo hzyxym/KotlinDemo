@@ -1,8 +1,8 @@
 package com.fzs.hzy.kotlindemo
 
+import com.fzs.hzy.baselibrary.foo.eat
 import com.fzs.hzy.baselibrary.utils.*
 import com.fzs.hzy.kotlindemo.entity.Customer
-import com.fzs.hzy.kotlindemo.entity.UserInfo
 
 val PI = 3.14
 var x = 0
@@ -259,23 +259,54 @@ fun stringGrammar() {
     println("index : $index")
 }
 
+lateinit var bar33 : Bar3
 fun testJackson(){
     val customer = Customer("hzy","953624084@qq.com")
     println("customer:"+JacksonUtil.toJSON(customer))
     val hzy = "{\"name\":\"hzy\",\"email\":\"953624084@qq.com\"}"
 
-    val userInfo = UserInfo()
-    userInfo.age = 2
-    userInfo.userName = "hzy"
-    println("user:${JacksonUtil.toJSON(userInfo)}")
+//    val userInfo = UserInfo()
+//    userInfo.age = 2
+//    userInfo.userName = "hzy"
+//    println("user:${JacksonUtil.toJSON(userInfo)}")
+//
+//    val userJson = "{\"userName\":\"hzy\",\"age\":\"2\",\"nickName\":\"aa\"}"
+//    val user = JacksonUtil.readValue(userJson,UserInfo::class.java)
+//    println("user name:${user.userName},user age:${user.age}")
+    val hzyCustomer = JacksonUtil.readValue(hzy,Customer::class.java)
+    println("hzy email:${hzyCustomer.email}")
+    println("customer :$hzy")
 
-    val userJson = "{\"userName\":\"hzy\",\"age\":\"2\",\"nickName\":\"aa\"}"
-    val user = JacksonUtil.readValue(userJson,UserInfo::class.java)
-    println("user name:${user.userName},user age:${user.age}")
-//    val hzyCustomer = JacksonUtil.readValue(hzy,Customer::class.java)
-//    println("hzy email:${hzyCustomer.email}")
-    println("test commit 1")
+    val bar1 = Bar1()
+    bar1.f()
+    println("bar1 y：${bar1.y} \nbar1 x: ${bar1.x}")
+
+    val bar3 = object :  Bar3(){
+        override fun eat() {
+            println("bar3.eat()")
+        }
+    }
+    bar3.eat()
+
+    val bar3Copy = object : Bar3(){
+        override fun eat() {
+            println("bar3Copy eat")
+        }
+    }
+    bar3Copy.eat()
+
+    val bar = Bar()
+    println("")
+    bar.Baz().g()
+    bar.bar3 = object : Bar3(){
+        override fun eat() {
+            println("bar3 has init")
+        }
+    }
+    bar.testInit()
+    println("isInitialized : ${::bar33.isInitialized}")
 }
+
 
 
 
