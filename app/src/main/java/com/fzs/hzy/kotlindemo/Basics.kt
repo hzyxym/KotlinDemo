@@ -348,3 +348,7 @@ val <T> List<T>.lastIndex: Int
 fun testBranch(){
     println("测试分支")
 }
+
+fun testBranch2(){
+    println("测试分支2.0.0")
+}
