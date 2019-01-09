@@ -149,5 +149,60 @@ interface D {
 class C() : A(), B, D {
     override fun f() {
         super<D>.f()
+        println("member")
     }
 }
+
+interface MyInterface {
+    val prop: Int // 抽象的
+
+    val propertyWithImplementation: String
+        get() = "foo"
+
+    fun foo() {
+        print(prop)
+    }
+}
+
+class Child : MyInterface {
+    override val prop: Int = 29
+}
+
+open class Outer {
+    private val a = 1
+    protected open val b = 2
+    internal val c = 3
+    val d = 4  // 默认 public
+
+    class Nested {
+        var e: Int = 5
+    }
+}
+
+class Subclass : Outer() {
+    // a 不可见
+    // b、c、d 可见
+    // Nested 和 e 可见
+    override val b = 5   // “b”为 protected
+    val nested : Nested = Nested()
+    init {
+        nested.e = 6
+        println("c:$c d:$d e:${Nested().e}")
+    }
+}
+
+class Unrelated(o: Outer) {
+    // o.a、o.b 不可见
+    // o.c 和 o.d 可见（相同模块）
+    // Outer.Nested 不可见，Nested::e 也不可见
+    init {
+        println("c:${o.c},d:${o.d}")
+    }
+}
+
+fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
+    val tmp = this[index1] // “this”对应该列表
+    this[index1] = this[index2]
+    this[index2] = tmp
+}
+

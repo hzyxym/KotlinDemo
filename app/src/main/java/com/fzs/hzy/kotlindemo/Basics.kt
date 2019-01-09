@@ -103,8 +103,8 @@ fun whenRangeGrammar() {
     }
 }
 
-fun filterGrammar(){
-    val fruits = listOf("apple", "orange", "banana", "pear","are","age","apple")
+fun filterGrammar() {
+    val fruits = listOf("apple", "orange", "banana", "pear", "are", "age", "apple")
     fruits
         .filter { it.startsWith("a") }
         .sortedBy { it }
@@ -114,17 +114,17 @@ fun filterGrammar(){
     println(fruit)
 }
 
-fun dataClassGrammar(){
-    var customer = Customer("hzy","953624084@qq.com")
-    var hzy = Customer("hzy","953624084@qq.com")
-    if(customer.equals(hzy)){
+fun dataClassGrammar() {
+    var customer = Customer("hzy", "953624084@qq.com")
+    var hzy = Customer("hzy", "953624084@qq.com")
+    if (customer.equals(hzy)) {
         println("castomer is hzy $hzy")
     }
     var email = customer.email?.let { "hzy email: $it" }
     println(email)
 }
 
-fun mapGrammar(){
+fun mapGrammar() {
     val map = mapOf("a" to 1, "b" to 2, "c" to 3)
     println(map["a"])
     for ((k, v) in map) {
@@ -132,13 +132,13 @@ fun mapGrammar(){
     }
 }
 
-fun listGrammar(){
+fun listGrammar() {
 //    val values = arrayOfNulls<String>(3)
     val values = arrayOfMinusOnes(3)
     values.map { println("list $it") }
 }
 
-fun String.hzyExtend(): String{
+fun String.hzyExtend(): String {
     return this + "hzy"
 }
 
@@ -146,7 +146,7 @@ fun arrayOfMinusOnes(size: Int): IntArray {
     return IntArray(size).apply { fill(-1) }
 }
 
-fun basicsGrammar(){
+fun basicsGrammar() {
     val bytes = 0b10010010
     val hexBytes = 0xFF_EC_DE_5E
     val socialSecurityNumber = 999_99_99_99L
@@ -179,23 +179,23 @@ fun basicsGrammar(){
 fun check(c: Char) {
     println("thi char is $c")
     var char = 'a'
-    if(c == char){
+    if (c == char) {
         println("thi char is $char")
     }
 }
 
-fun grammarOrNull(){
+fun grammarOrNull() {
     val fruits = getNull('c')
     val fruit = fruits?.firstOrNull() ?: "none"
     println("fruit:$fruit")
     println("fruit[0]${fruits?.get(0)}")
     var iterator = fruits?.iterator()
-    while (iterator?.hasNext() == true){
+    while (iterator?.hasNext() == true) {
         println("iterator:${iterator.next()}")
     }
 
     // 创建一个 Array<String> 初始化为 ["0", "1", "4", "9", "16"]
-    val asc = Array(5) { it -> (it * it).toString()}
+    val asc = Array(5) { it -> (it * it).toString() }
     asc.forEach { println(it) }
 
     val x: IntArray = intArrayOf(1, 2, 3)
@@ -203,15 +203,15 @@ fun grammarOrNull(){
 }
 
 fun getNull(c: Char): Array<String>? {
-    return if(c == 'c'){
-        arrayOf("a","b")
-    }else{
+    return if (c == 'c') {
+        arrayOf("a", "b")
+    } else {
         null
     }
 }
 
 @ExperimentalUnsignedTypes
-fun unsignedGrammar(){
+fun unsignedGrammar() {
     val b: UByte = 1u  // UByte，已提供预期类型
     val s: UShort = 1u // UShort，已提供预期类型
     val l: ULong = 1u  // ULong，已提供预期类型
@@ -246,9 +246,9 @@ fun stringGrammar() {
     println("int max :${Int.MAX_VALUE}")
     println("uint max :${UInt.MAX_VALUE}")
     println("time :${24 * 60 * 60 * 1000}")
-    var f : Float = 2f/3
-    val l : Long = Int.MAX_VALUE + 2L
-    val ll : Long = 0
+    var f: Float = 2f / 3
+    val l: Long = Int.MAX_VALUE + 2L
+    val ll: Long = 0
     println("float twoThirds = $f")
     //TODO show view
     println("task1")
@@ -259,10 +259,10 @@ fun stringGrammar() {
     println("index : $index")
 }
 
-lateinit var bar33 : Bar3
-fun testJackson(){
-    val customer = Customer("hzy","953624084@qq.com")
-    println("customer:"+JacksonUtil.toJSON(customer))
+lateinit var bar33: Bar3
+fun testJackson() {
+    val customer = Customer("hzy", "953624084@qq.com")
+    println("customer:" + JacksonUtil.toJSON(customer))
     val hzy = "{\"name\":\"hzy\",\"email\":\"953624084@qq.com\"}"
 
 //    val userInfo = UserInfo()
@@ -273,7 +273,7 @@ fun testJackson(){
 //    val userJson = "{\"userName\":\"hzy\",\"age\":\"2\",\"nickName\":\"aa\"}"
 //    val user = JacksonUtil.readValue(userJson,UserInfo::class.java)
 //    println("user name:${user.userName},user age:${user.age}")
-    val hzyCustomer = JacksonUtil.readValue(hzy,Customer::class.java)
+    val hzyCustomer = JacksonUtil.readValue(hzy, Customer::class.java)
     println("hzy email:${hzyCustomer.email}")
     println("customer :$hzy")
 
@@ -281,14 +281,14 @@ fun testJackson(){
     bar1.f()
     println("bar1 y：${bar1.y} \nbar1 x: ${bar1.x}")
 
-    val bar3 = object :  Bar3(){
+    val bar3 = object : Bar3() {
         override fun eat() {
             println("bar3.eat()")
         }
     }
     bar3.eat()
 
-    val bar3Copy = object : Bar3(){
+    val bar3Copy = object : Bar3() {
         override fun eat() {
             println("bar3Copy eat")
         }
@@ -298,15 +298,53 @@ fun testJackson(){
     val bar = Bar()
     println("")
     bar.Baz().g()
-    bar.bar3 = object : Bar3(){
+    bar.bar3 = object : Bar3() {
         override fun eat() {
             println("bar3 has init")
         }
     }
     bar.testInit()
     println("isInitialized : ${::bar33.isInitialized}")
+
+    var sub = Subclass()
+    val nested = Outer.Nested()
+    println("c:${sub.c} d:${sub.d}  nested.e:${nested.e} sub.nested.e:${sub.nested.e}")
+
+    val l = mutableListOf(1, 2, 3)
+    l.swap(0, 2) // “swap()”内部的“this”得到“l”的值
+    l.map { println("$it") }
+
+    printFoo(C())
+
+    val myList = listOf<Int>(9,8,7)
+    println("lastIndex:${myList.lastIndex}")
+
 }
 
 
+fun C.foo() = "c"
 
+fun D.foo() = "d"
 
+fun C.f(){
+    println("extension")
+}
+
+fun printFoo(c: C) {
+    println(c.foo())
+    c.f()
+}
+
+fun Any?.toString(): String {
+    if (this == null) return "null"
+    // 空检测之后，“this”会自动转换为非空类型，所以下面的 toString()
+    // 解析为 Any 类的成员函数
+    return toString()
+}
+
+val <T> List<T>.lastIndex: Int
+    get() = size - 1
+
+fun testBranch(){
+    println("测试分支")
+}
