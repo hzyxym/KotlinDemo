@@ -8,6 +8,12 @@
         android:gravity="center"
         tools:context=".MainActivity">
 
+    <ImageView
+            android:id="@+id/ivGlide"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -15,10 +21,16 @@
             android:text="Hello World!"/>
 
     <Button
+            android:id="@+id/btnLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载图片"/>
+
+    <Button
             android:id="@+id/btn_fzs"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="200dp"
             android:text="开启蜂助手"
             style="?android:attr/borderlessButtonStyle"
             android:background="@drawable/btn_corner_yellow_bg_black_edg_selector"/>
