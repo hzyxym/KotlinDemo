@@ -151,3 +151,19 @@ class C() : A(), B, D {
         super<D>.f()
     }
 }
+
+enum class Color(val rgb: Int) {
+    RED(0xFF0000),
+    GREEN(0x00FF00),
+    BLUE(0x0000FF);
+
+    fun showColorRGB(){
+        println("this color rgb is ${rgb.toString(16)}")
+    }
+
+    companion object {
+        fun parse(color: String): Color{
+            return Color.valueOf(color.toUpperCase())
+        }
+    }
+}
