@@ -1,4 +1,4 @@
-package com.fzs.hzy.baselibrary.glide;
+package com.fzs.hzy.kotlindemo.glide;
 
 import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.annotation.GlideExtension;

@@ -1,4 +1,4 @@
-package com.fzs.hzy.baselibrary.glide
+package com.fzs.hzy.kotlindemo.glide
 
 import com.bumptech.glide.load.Options
 import com.bumptech.glide.load.model.*

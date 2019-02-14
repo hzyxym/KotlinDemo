@@ -1,4 +1,4 @@
-package com.fzs.hzy.baselibrary.glide
+package com.fzs.hzy.kotlindemo.glide
 
 import android.content.Context
 import com.bumptech.glide.Glide
