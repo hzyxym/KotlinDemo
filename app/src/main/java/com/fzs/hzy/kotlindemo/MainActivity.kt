@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tvText.text = "fdasfdasfd"
+
         var user = User("hzy", 28)
         println(user)
         println("hzyxym0")
@@ -39,6 +42,8 @@ class MainActivity : AppCompatActivity() {
                 .fitCenter()
                 .into(ivGlide)
         }
+
+
     }
     private object MyListener: View.OnClickListener{
         override fun onClick(v: View?) {
