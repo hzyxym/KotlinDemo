@@ -24,7 +24,12 @@ fun main(vararg args: String) {
 //    testJackson()
 //    testRadom()
 
-    testCalculate()
+//    testCalculate()
+    testVi1()
+}
+
+fun testVi1(){
+    println("commit 1")
 }
 
 fun testCalculate(){
