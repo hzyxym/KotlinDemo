@@ -3,6 +3,7 @@ package com.fzs.hzy.kotlindemo
 import com.fzs.hzy.baselibrary.foo.eat
 import com.fzs.hzy.baselibrary.utils.*
 import com.fzs.hzy.kotlindemo.entity.Customer
+import kotlin.random.Random
 
 val PI = 3.14
 var x = 0
@@ -20,7 +21,34 @@ fun main(vararg args: String) {
 //    basicsGrammar()
 //    grammarOrNull()
 //    stringGrammar()
-    testJackson()
+//    testJackson()
+//    testRadom()
+
+    testCalculate()
+}
+
+fun testCalculate(){
+    var a = 0
+    a = a or 67108864
+    println("a:$a")
+    var b = 0
+    b = b and 67108864.inv()
+//    b = b and 67108864
+    println("b:$b")
+}
+
+fun testRadom(){
+   for (i in 1..4){
+       println("radom:${(0..3).random()}")
+   }
+}
+
+fun testArray(){
+    val array = IntArray(3)
+    array.forEach {
+        println("it:$it")
+    }
+
 }
 
 
