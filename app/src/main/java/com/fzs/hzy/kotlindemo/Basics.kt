@@ -22,10 +22,10 @@ fun main(vararg args: String) {
 //    grammarOrNull()
 //    stringGrammar()
 //    testJackson()
-//    testRadom()
+    testRadom()
 
 //    testCalculate()
-    testVi2()
+//    testVi2()
 }
 
 fun testVi2(){
@@ -47,8 +47,9 @@ fun testCalculate(){
 }
 
 fun testRadom(){
-   for (i in 1..4){
-       println("radom:${(0..3).random()}")
+    val images = arrayOf("a","b","c","d")
+   for (i in 1..40){
+       println("radom:${(0 until images.size).random()}")
    }
 }
 
