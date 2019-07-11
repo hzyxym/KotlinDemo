@@ -7,6 +7,7 @@ import kotlin.reflect.KProperty
 fun main(vararg args : String){
 //    test()
 //    testHzyClass()
+    //1
 }
 
 fun test(){
