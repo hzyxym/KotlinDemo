@@ -9,6 +9,9 @@ fun main(vararg args : String){
 //    testHzyClass()
     //1
     //2
+    //3
+    //4
+    //5
 }
 
 fun test(){
