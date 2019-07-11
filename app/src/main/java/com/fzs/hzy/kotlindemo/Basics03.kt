@@ -8,6 +8,7 @@ fun main(vararg args : String){
 //    test()
 //    testHzyClass()
     //1
+    //2
 }
 
 fun test(){
