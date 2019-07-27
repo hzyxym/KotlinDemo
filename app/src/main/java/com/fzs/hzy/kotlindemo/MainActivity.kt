@@ -15,11 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvText.text = "fdasfdasf"//这代码没错
+        tvText.text = "fdasfdasf"//赋值
 
         var user = User("hzy", 28)
         println(user)
         println("hzyxym0")
+        println("abc")
         btn_fzs.setOnClickListener{println("aa")}
         val bar3 = Bar()
         bar3.testInit()
