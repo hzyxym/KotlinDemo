@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvText.text = "fdasfdasf"
+        tvText.text = "fdasfdasf"//这代码没错
 
         var user = User("hzy", 28)
         println(user)
