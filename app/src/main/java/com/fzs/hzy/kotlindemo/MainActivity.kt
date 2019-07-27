@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvText.text = "fdasfdasfd"
+//        tvText.text = "fdasfdasfd"
 
         var user = User("hzy", 28)
         println(user)
@@ -45,6 +45,11 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    fun eat(){
+        print("eat")
+    }
+
     private object MyListener: View.OnClickListener{
         override fun onClick(v: View?) {
             print("hzy")
