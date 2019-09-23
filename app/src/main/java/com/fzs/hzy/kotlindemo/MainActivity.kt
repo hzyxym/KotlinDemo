@@ -15,11 +15,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvText.text = "fdasfdasfd"
+
+        tvText.text = "fdasfdasf"//赋值
+
+        //this is nothing
 
         var user = User("hzy", 28)
         println(user)
         println("hzyxym0")
+        println("abc")
         btn_fzs.setOnClickListener{println("aa")}
         val bar3 = Bar()
         bar3.testInit()
@@ -45,6 +49,11 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    fun eat(){
+        print("eat")
+    }
+
     private object MyListener: View.OnClickListener{
         override fun onClick(v: View?) {
             print("hzy")
