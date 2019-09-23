@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity() {
         val listener = MyListener
         btn_fzs.setOnClickListener(MyListener)
 
-        val options = RequestOptions().centerCrop()
-        Glide.with(this)
-            .load("http://www.pptbz.com/pptpic/UploadFiles_6909/201211/2012111719294197.jpg")
-            .apply(options)
-            .into(ivGlide)
+//        val options = RequestOptions().centerCrop()
+//        Glide.with(this)
+//            .load("http://www.pptbz.com/pptpic/UploadFiles_6909/201211/2012111719294197.jpg")
+//            .apply(options)
+//            .into(ivGlide)
         btn_fzs.setOnClickListener {
             val intent = Intent(this,GlideTestActivity::class.java)
             startActivity(intent)

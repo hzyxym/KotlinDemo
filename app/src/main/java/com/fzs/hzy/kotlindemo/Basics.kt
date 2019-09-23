@@ -22,14 +22,15 @@ fun main(vararg args: String) {
 //    grammarOrNull()
 //    stringGrammar()
 //    testJackson()
-    testRadom()
+//    testRadom()
 
 //    testCalculate()
-//    testVi2()
+    testVi2()
 }
 
 fun testVi2(){
-    println("commit 2")
+    val height = (1940 * (1.7777778 / 1.7962962))
+    println("height:$height")
 }
 
 fun testVi1(){

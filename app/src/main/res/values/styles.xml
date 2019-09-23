@@ -13,9 +13,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="SplashTheme" parent="AppTheme.NoActionBar">
-        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
-        <item name="android:windowBackground">@mipmap/splash_bg_1</item>
+    <style name="SplashTheme" parent="AppTheme">
+        <!--<item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>-->
+        <!--<item name="android:windowBackground">@mipmap/splash_bg_1</item>-->
     </style>
 
 </resources>
