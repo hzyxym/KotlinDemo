@@ -7,6 +7,8 @@ package com.fzs.hzy.kotlindemo
 class HzyClass{
     init {
         println("hzy")
+        println("1")
+        println("2")
     }
 }
 
